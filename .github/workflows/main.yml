@@ -9,10 +9,14 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
+        env: 
+          USER_NAME: ${{ secrets.NAME }}
       - name: code push
         run: |
           echo Run to bbbb,
           cat ./code/maze.cpp
       - name: code list
         run: ls -al code
+      - name: name check
+        run: echo $USER_NAME
       
