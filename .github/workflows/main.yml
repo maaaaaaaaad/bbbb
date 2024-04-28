@@ -1,0 +1,16 @@
+name: playground
+on:
+  push:
+    branches:
+    - main
+jobs:
+  my_job:
+    name: deploy to staging
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: code push
+        run: |
+          echo Run to bbbb,
+          cat ./code/maze.cpp
+      
