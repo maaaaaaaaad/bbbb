@@ -8,8 +8,11 @@ jobs:
     name: deploy to staging
     runs-on: ubuntu-22.04
     steps:
+      - uses: actions/checkout@v2
       - name: code push
         run: |
           echo Run to bbbb,
           cat ./code/maze.cpp
+      - name: code list
+        run: ls -al
       
