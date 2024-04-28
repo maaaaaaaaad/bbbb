@@ -14,5 +14,7 @@ jobs:
           echo Run to bbbb,
           cat ./code/maze.cpp
       - name: code list
-        run: ls -al
+        run: |
+          cd ./code,
+          ls -al
       
